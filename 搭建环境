@@ -1,0 +1,16 @@
+1. 随便在硬盘下建两个文件夹include lib
+2. 下载GLFW，glfw-3.2.bin.WIN32,下32位的，64的会有各种问题，把其中的include lib-vc2015的内容拷到上述的两个文件夹里
+   这里最好自己用CMake生成下，免得跟自己的系统有兼容问题，我偷懒就直接用了。
+3. 下载GLEW，打开glew.sln，解决方案配置选择release32位，然后选择glew_static，重新生成，然后找到生成的glew32s.lib拷贝到上述的lib下
+    同时将include下的文件也拷到上述的include中
+4. VS新建一个空项目，
+   在VC++目录的包含目录设置为：D:\OpenGl-Study\include;$(IncludePath)
+   库目录设置为：D:\OpenGl-Study\lib;$(LibraryPath)
+   链接器->输入->附加依赖项 填入:opengl32.lib, glfw3.lib, glew32s.lib
+5. 在源文件下就可以开始啦！！
+    详情见下节
+    
+    
+
+
+
