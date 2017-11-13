@@ -29,7 +29,7 @@ int main(void)
 	}
 	//告诉openGL下面要渲染的窗口大小，每次改变窗口大小的时候会调用这个函数
 	//作用：openGL是根据glViewport中设置的位置、宽、高来进行2D的坐标转换，将openGL中的坐标
-	//转换为当前的屏幕坐标，openGL的坐标只能是-1--1，就是讲这个范围内的坐标映射到(0,width)(0,height)中
+	//转换为当前的屏幕坐标，openGL的坐标只能是-1--1(也叫标准化设备坐标)，就是讲这个范围内的坐标映射到(0,width)(0,height)中
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 	//用while循环来控制持续的绘制
