@@ -1,4 +1,5 @@
 ```
+
 int main(void)
 {
 	glfwInit(); //初始化glfw
